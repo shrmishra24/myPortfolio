@@ -6,16 +6,16 @@
 <div class="row">
     {% for e in educations%}
   <div class="col-lg-4" data-aos="fade-up">
-        <div id="accordion">
+        <div id="accordion-{{ e.id }}">
             <div class="card">
-              <div class="card-header" id="headingOne{{e.id}}">
-                  <div class="card" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapse" >
+              <div class="card-header" id="headingOne-{{ e.id }}">
+                  <div class="card" data-toggle="collapse" data-target="#collapse-{{ e.id }}" aria-expanded="true" aria-controls="collapse" >
                     <img class="card-img-top" src="{% static e.logo %}"  height="200">
                     <div class="card-body">
                     </div>
                   </div>
               </div>
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div id="collapse-{{ e.id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-{{ e.id }}">
                 <div class="card-body">
                   <p>{{ e.college }} &nbsp; - &nbsp; {{ e.year }}</p>
                     <p>{{ e.degree }}&nbsp; - &nbsp; {{ e.marks }} </p>
