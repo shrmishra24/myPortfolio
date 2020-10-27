@@ -1,0 +1,21 @@
+
+<div class="section-title">
+          <h2>Professional Experience</h2>
+          <p>Self-driven SQL Developer with 3 years orchestrating high-performance PL/SQL programming and database solutions
+              aligned with business objectives. Expert grasp of SQL code generation, analytics, reporting
+              and business intelligence. Advanced experience in PostgreSQL and Oracle. </p>
+        </div>
+
+        <div class="row">
+            {% for project in projectExp %}
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="resume-item">
+              <h4>{{ project.title }}</h4>
+              <h5>{{ project.fromDate }} - {{ project.toDate }}</h5>
+              <p><em>{{ project.companyName }}</em></p>
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+            {% endfor %}
+        </div>
+
